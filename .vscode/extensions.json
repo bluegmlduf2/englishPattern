@@ -4,7 +4,6 @@
     "vue.volar",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    "csstools.postcss",
     "antfu.iconify"
   ]
 }

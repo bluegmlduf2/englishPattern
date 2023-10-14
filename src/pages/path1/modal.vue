@@ -13,7 +13,7 @@ const open = ref(false)
 
 <template>
   <div class="flex items-center justify-center">
-    <button class="rounded-lg bg-white p-4" @click="open = !open">
+    <button class="rounded-lg border-2 p-4" @click="open = !open">
       Open Modal
     </button>
     <TransitionRoot as="template" :show="open">
@@ -60,8 +60,9 @@ const open = ref(false)
                 <div
                   class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100"
                 >
-                  <UnoIcon
-                    class="i-ic-round-check h-6 w-6 text-lg text-green-600"
+                  <Icon
+                    name="ic:baseline-check"
+                    class=" h-6 w-6 text-lg text-green-600"
                   />
                 </div>
                 <div class="mt-3 text-center sm:mt-5">

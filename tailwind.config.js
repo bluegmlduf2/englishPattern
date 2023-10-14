@@ -14,9 +14,18 @@ module.exports = {
     './assets/**/*.css',
   ],
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
     extend: {
       fontFamily: {
         sans: ['"Inter var"', ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        'color-1': '#ffffff',
       },
     },
   },

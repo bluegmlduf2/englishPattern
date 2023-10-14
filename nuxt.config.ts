@@ -1,36 +1,15 @@
-import presetIcons from '@unocss/preset-icons'
-
 export default defineNuxtConfig({
   srcDir: 'src',
   devtools: true,
   modules: [
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
-    // pinia plugin - https://pinia.esm.dev
     '@pinia/nuxt',
-    // unocss plugin - https://github.com/unocss/unocss
-    '@unocss/nuxt',
     '@nuxtjs/i18n',
-    '@nuxtjs/color-mode',
-    // https://github.com/huntersofbook/huntersofbook/tree/main/packages/naive-ui-nuxt
-    '@huntersofbook/naive-ui-nuxt',
+    'nuxt-icon',
   ],
   build: {
     transpile: ['@headlessui/vue'],
-  },
-  unocss: {
-    uno: false,
-    preflight: false,
-    icons: true,
-    presets: [
-      presetIcons({
-        scale: 1.2,
-        extraProperties: {
-          display: 'inline-block',
-        },
-      }),
-    ],
-    safelist: ['i-twemoji-flag-us-outlying-islands', 'i-twemoji-flag-turkey'],
   },
 
   // localization - i18n config
@@ -40,9 +19,9 @@ export default defineNuxtConfig({
         code: 'en',
         file: 'en-US.json',
       },
-      { code: 'tr', file: 'tr-TR.json' },
+      { code: 'ja', file: 'ja-JP.json' },
     ],
-    defaultLocale: 'tr',
+    defaultLocale: 'ja',
     lazy: true,
     langDir: 'locales/',
     strategy: 'prefix_except_default',
@@ -51,12 +30,6 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root', // recommended
     },
-    // vueI18n: {
-    //   legacy: false,
-    //   locale: 'tr',
-    //   fallbackLocale: 'tr',
-    //   availableLocales: ['en', 'tr'],
-    // },
   },
 
   typescript: {
@@ -67,11 +40,6 @@ export default defineNuxtConfig({
       },
     },
   },
-  colorMode: {
-    classSuffix: '',
-    fallback: 'light',
-    storageKey: 'color-mode',
-  },
 
   tailwindcss: {
     configPath: './tailwind.config.js',
@@ -79,14 +47,5 @@ export default defineNuxtConfig({
 
   vite: {
     logLevel: 'info',
-  },
-
-  postcss: {
-    plugins: {
-      'postcss-nested': {},
-      'postcss-import': {},
-      'tailwindcss/nesting': {},
-      'tailwindcss': {},
-    },
   },
 })

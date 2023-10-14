@@ -6,7 +6,7 @@ const counter = useCounter()
 
 <template>
   <div>
-    <div class="global-text">
+    <div class="">
       <pre>{{ counter.$state }}</pre>
       <!-- Remove this component to get started! -->
       <p>
@@ -19,7 +19,7 @@ const counter = useCounter()
       <br>
       <input v-model="counter.n" class="text-black" type="number">
     </div>
-    <button class="global-text p-4" @click="counter.increment()">
+    <button class="mt-2 p-4 border-2 rounded" @click="counter.increment()">
       +1 number click
     </button>
   </div>
