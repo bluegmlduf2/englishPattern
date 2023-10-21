@@ -7,9 +7,7 @@ const locale = useState<string>('locale.i18n')
 
 <template>
   <Html :lang="locale">
-    <Body
-      class="bg-white text-gray-800 antialiased transition-colors duration-300 dark:bg-gray-900 dark:text-gray-200"
-    >
+    <Body>
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
