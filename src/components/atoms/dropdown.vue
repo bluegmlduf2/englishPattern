@@ -29,7 +29,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
                   active ? 'bg-violet-500 text-white' : 'text-gray-900',
                 ]"
               >
-                Edit
+                검색하기
               </button>
             </MenuItem>
             <MenuItem v-slot="{ active }">
@@ -38,18 +38,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
                   active ? 'bg-violet-500 text-white' : 'text-gray-900',
                 ]"
               >
-                Duplicate
-              </button>
-            </MenuItem>
-          </div>
-          <div class="px-1 py-1">
-            <MenuItem v-slot="{ active }">
-              <button
-                class="group flex w-full items-center rounded-md px-2 py-2 text-sm" :class="[
-                  active ? 'bg-violet-500 text-white' : 'text-gray-900',
-                ]"
-              >
-                Archive
+                신규 패턴 등록
               </button>
             </MenuItem>
             <MenuItem v-slot="{ active }">
@@ -58,19 +47,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
                   active ? 'bg-violet-500 text-white' : 'text-gray-900',
                 ]"
               >
-                Move
-              </button>
-            </MenuItem>
-          </div>
-
-          <div class="px-1 py-1">
-            <MenuItem v-slot="{ active }">
-              <button
-                class="group flex w-full items-center rounded-md px-2 py-2 text-sm" :class="[
-                  active ? 'bg-violet-500 text-white' : 'text-gray-900',
-                ]"
-              >
-                Delete
+                패턴 메일로 받기
               </button>
             </MenuItem>
           </div>
