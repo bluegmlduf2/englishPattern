@@ -12,69 +12,86 @@ const lists = computed<ILink[]>(() => [
 </script>
 
 <template>
-  <main class="bg-white dark:bg-gray-900 max-w-screen-md mx-auto">
-    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-      <div class="md:flex md:justify-between md:items-center font-light text-gray-500 sm:text-lg dark:text-gray-400 pb-4 border-b-2">
-        <h2 class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+  <main class="bg-white max-w-screen-md mx-auto">
+    <div class="py-8 px-4 md:py-16 md:px-6">
+      <div class="md:flex md:justify-between md:items-center font-light text-gray-500 sm:text-lg pb-4 border-b-2">
+        <h2 class="text-4xl tracking-tight font-extrabold text-gray-900 ">
           Thank you for ~
         </h2>
         <p class="text-xl mt-2 md:mt-0">
           ~해 주셔서 감사합니다
         </p>
       </div>
-      <h3 class="text-2xl font-bold py-3">
+      <h3 class="text-2xl font-bold pt-4 pb-2">
         Useful Expression
       </h3>
-      <ol class="space-y-1">
-        <li class="flex justify-between">
-          <span>Thank you for Calling</span>
-          <span>전화해주셔서감사합니다</span>
+      <ol class="space-y-3 md:space-y-1">
+        <li class="md:flex md:justify-between">
+          <p class="text-lg">
+            Thank you for Calling
+          </p>
+          <p>전화해주셔서감사합니다</p>
         </li>
-        <li class="flex justify-between">
-          <span>Thank you for Waiting</span>
-          <span>기다려주셔서 감사합니다</span>
+        <li class="md:flex md:justify-between">
+          <p class="text-lg">
+            Thank you for Waiting
+          </p>
+          <p>기다려주셔서 감사합니다</p>
         </li>
-        <li class="flex justify-between">
-          <span>Thank you for Your trouble</span>
-          <span>애써 주셔서 감사합니다</span>
+        <li class="md:flex md:justify-between">
+          <p class="text-lg">
+            Thank you for Your trouble
+          </p>
+          <p>애써 주셔서 감사합니다</p>
         </li>
       </ol>
-      <h3 class="text-2xl font-bold py-3 mt-2">
+      <h3 class="text-2xl font-bold pt-4 pb-2 mt-2">
         Dialogue
       </h3>
-      <ul class="space-y-1">
-        <li>
-          <span>A :</span>
-          <span>Thank you for joining us</span>
+      <ul class="space-y-3 md:space-y-1">
+        <li class="md:flex md:justify-between">
+          <p class="text-lg">
+            <span>A :</span>
+            <span>Thank you for joining us</span>
+          </p>
+          <p>
+            <span>A :</span>
+            <span>함께 해 주신 것을 환영합니다</span>
+          </p>
         </li>
-        <li>
-          <span>B :</span>
-          <span>Thank you for inviting us</span>
+        <li class="md:flex md:justify-between">
+          <p class="text-lg">
+            <span>B :</span>
+            <span>Thank you for inviting us</span>
+          </p>
+          <p>
+            <span>B :</span>
+            <span>초대해 주셔서 감사합니다</span>
+          </p>
         </li>
       </ul>
-      <ul class="space-y-1">
-        <li>
-          <span>A :</span>
-          <span>함께 해 주신 것을 환영합니다</span>
-        </li>
-        <li>
-          <span>B :</span>
-          <span>초대해 주셔서 감사합니다</span>
-        </li>
-      </ul>
-      <h3 class="text-2xl font-bold py-3 mt-2">
+
+      <h3 class="text-2xl font-bold pt-4 pb-2 mt-2">
         Exercises
       </h3>
-      <ol class="space-y-1">
-        <li class="flex justify-between">
-          <span>Thank you for ____</span>
-          <span>와 주셔서 감사합니다</span>
+      <ul class="space-y-3 md:space-y-1">
+        <li class="md:flex md:justify-between">
+          <p class="text-lg">
+            <span>Thank you for ____</span>
+          </p>
+          <p>
+            <span>와 주셔서 감사합니다</span>
+          </p>
         </li>
-        <li class="flex justify-between">
-          <span>Thank you for ____</span>
-          <span>모든것에 감사합니다</span>
+        <li class="md:flex md:justify-between">
+          <p class="text-lg">
+            <span>Thank you for ____</span>
+          </p>
+          <p>
+            <span>모든것에 감사합니다</span>
+          </p>
         </li>
-      </ol>
+      </ul>
     </div>
   </main>
 </template>
