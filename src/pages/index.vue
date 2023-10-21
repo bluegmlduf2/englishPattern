@@ -12,13 +12,14 @@ const lists = computed<ILink[]>(() => [
 </script>
 
 <template>
-  <main class="bg-white max-w-screen-md mx-auto">
-    <div class="py-8 px-4 md:py-16 md:px-6">
+  <main class="min-h-screen bg-slate-200 px-6 py-4">
+    <div class="bg-white max-w-screen-md rounded-lg shadow-2xl mx-auto px-4 pt-4 pb-8 md:px-6 relative">
+      <AtomsDropdown class="absolute right-0 top-0" />
       <div class="md:flex md:justify-between md:items-center font-light text-gray-500 sm:text-lg pb-4 border-b-2">
         <h2 class="text-4xl tracking-tight font-extrabold text-gray-900 ">
           Thank you for ~
         </h2>
-        <p class="text-xl mt-2 md:mt-0">
+        <p class="text-xl mt-2 md:mt-0 md:mr-4">
           ~해 주셔서 감사합니다
         </p>
       </div>
@@ -27,19 +28,19 @@ const lists = computed<ILink[]>(() => [
       </h3>
       <ol class="space-y-3 md:space-y-1">
         <li class="md:flex md:justify-between">
-          <p class="text-lg">
+          <p class="text-xl">
             Thank you for Calling
           </p>
           <p>전화해주셔서감사합니다</p>
         </li>
         <li class="md:flex md:justify-between">
-          <p class="text-lg">
+          <p class="text-xl">
             Thank you for Waiting
           </p>
           <p>기다려주셔서 감사합니다</p>
         </li>
         <li class="md:flex md:justify-between">
-          <p class="text-lg">
+          <p class="text-xl">
             Thank you for Your trouble
           </p>
           <p>애써 주셔서 감사합니다</p>
@@ -70,7 +71,6 @@ const lists = computed<ILink[]>(() => [
           </p>
         </li>
       </ul>
-
       <h3 class="text-2xl font-bold pt-4 pb-2 mt-2">
         Exercises
       </h3>
