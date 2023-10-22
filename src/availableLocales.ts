@@ -8,9 +8,9 @@ export interface ILocales {
 
 export const availableLocales: ILocales = {
   en: {
-    name: 'English',
-    iso: 'en',
-    flag: 'twemoji:flag-us-outlying-islands',
+    name: 'Korea',
+    iso: 'ko',
+    flag: 'twemoji:flag-south-korea',
   },
   ja: {
     name: 'Japanese',

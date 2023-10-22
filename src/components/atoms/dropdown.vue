@@ -1,9 +1,20 @@
 <script setup>
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
+import { useI18n } from 'vue-i18n'
+import { availableLocales } from '~/availableLocales'
+
+const switchLocalePath = useSwitchLocalePath()
+
+const { locale } = useI18n()
+
+const local = computed(() => {
+  return locale.value
+})
+const { t } = useLang()
 </script>
 
 <template>
-  <div class="fixed top-16 w-56 text-right">
+  <div>
     <Menu as="div" class="relative inline-block text-left">
       <div>
         <MenuButton class="p-1">
@@ -20,7 +31,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
         leave-to-class="transform scale-95 opacity-0"
       >
         <MenuItems
-          class="absolute right-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+          class="absolute right-2 w-60 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
         >
           <div class="px-1 py-1">
             <MenuItem v-slot="{ active }">
@@ -29,7 +40,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
                   active ? 'bg-violet-500 text-white' : 'text-gray-900',
                 ]"
               >
-                검색하기
+                {{ t("search") }}
               </button>
             </MenuItem>
             <MenuItem v-slot="{ active }">
@@ -38,7 +49,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
                   active ? 'bg-violet-500 text-white' : 'text-gray-900',
                 ]"
               >
-                신규 패턴 등록
+                {{ t("register") }}
               </button>
             </MenuItem>
             <MenuItem v-slot="{ active }">
@@ -47,9 +58,30 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
                   active ? 'bg-violet-500 text-white' : 'text-gray-900',
                 ]"
               >
-                패턴 메일로 받기
+                {{ t("receive") }}
               </button>
             </MenuItem>
+          </div>
+          <div class="px-1 py-1">
+            <NuxtLink
+              v-for="lang in availableLocales"
+              :key="lang.iso"
+              :to="switchLocalePath(lang.iso)"
+              class="flex w-full cursor-pointer items-center justify-between py-2 px-3"
+              :class="{
+                'text-white-500 bg-gray-200 dark:bg-gray-500/50':
+                  local === lang.iso,
+                'hover:bg-gray-200 dark:hover:bg-gray-700/30':
+                  local !== lang.iso,
+              }"
+            >
+              <span class="truncate">
+                {{ lang.name }}
+              </span>
+              <span class="flex items-center justify-center text-sm">
+                <Icon :name="lang.flag" class="text-base" />
+              </span>
+            </NuxtLink>
           </div>
         </MenuItems>
       </transition>

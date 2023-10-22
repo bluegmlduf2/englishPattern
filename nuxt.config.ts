@@ -16,12 +16,12 @@ export default defineNuxtConfig({
   i18n: {
     locales: [
       {
-        code: 'en',
-        file: 'en-US.json',
+        code: 'ko',
+        file: 'ko-KR.json',
       },
       { code: 'ja', file: 'ja-JP.json' },
     ],
-    defaultLocale: 'ja',
+    defaultLocale: 'ko',
     lazy: true,
     langDir: 'locales/',
     strategy: 'prefix_except_default',
