@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ILink } from '~/types'
+import { useEnglishPatternStore } from '@/store/english'
 
 const { t } = useLang()
 
@@ -8,7 +9,9 @@ const lists = computed<ILink[]>(() => [
   { id: 1, title: t('modal'), url: 'path1/modal', icon: 'carbon:circle-solid' },
   { id: 1, title: 'Menu', url: 'path1/menu', icon: 'carbon:circle-solid' },
 ])
-// TODO nav추가 => 번역기능 , 입력템플릿, 검색기능, 페이지네이션, 메일전송기능
+
+const englishPatternStore = useEnglishPatternStore()
+await englishPatternStore.initEnglishPattern()
 </script>
 
 <template>
